@@ -10,7 +10,7 @@ export default function App() {
       <h2 className="text-2xl font-bold tracking-tight">Choose Your Plan</h2>
       <hr className="my-3 w-1/3" />
       <RadioGroup value={plan} onChange={(e) => setPlan(e.target.value)}>
-        <div className="flex gap-4 justify-center flex-col">
+        <div className="flex gap-4 px-4 justify-center flex-col lg:flex-row">
           <Radio value="free">
             <Plan
               icon={<BadgePercent />}
@@ -46,7 +46,9 @@ export default function App() {
         </div>
       </RadioGroup>
       <hr className="my-4 w-1/3" />
-      <button className={`flex gap-4 items-center px-6 py-3 rounded-lg bg-violet-800 hover:bg-violet-600 font-semibold text-lg text-white`}>
+      <button
+        className={`flex gap-4 items-center px-11 py-3 rounded-lg bg-violet-800 hover:bg-violet-600 font-semibold text-lg text-white`}
+      >
         Proceed with {plan} plan
         <ArrowRight />
       </button>
